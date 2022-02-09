@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+        <title>Okaidi Quizzz</title>
+    </head>
+
+    <body>
+        <div id="mainframe">
+            <div class="row">
+                <div class="column question">
+                    <div class="question-title">
+                        <div>
+                            Question <strong id="question-number"></strong> 
+                        </div>
+                        <div>
+                            Remaining Time <strong class="countdown">00:30</strong>
+                        </div>
+                    </div>
+                    <div class="question-content">
+                        <p id="question"></p>
+                    </div>
+                </div>
+    
+                <div class="column answer">
+                    <div class="answer-title">
+                        <strong>
+                            Answers
+                        </strong>
+                        <br/>
+                    </div>
+                    <div id="answer-container">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <p class="error-message" id="no-answer" style="display: none;">You still have time please select an answer !</p>
+                <button type="button" class="button" id="next-button">Next</button>
+            </div>
+        </div>
+        
+
+        <div class="results" style="display: none;">
+            <div class="score"></div>
+            <div class="result-content">
+            </div>
+            <div class="center">
+                <button type="button" class="button" id="new-game">Start a new game</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+.row {
+    display: flex;
+}
+  
+.column {
+    flex: 50%;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.button {
+    background-color: #2d7ee7;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.answer-title {
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: #468fee;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+}
+
+.answer-select {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.answer-select input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+  
+  
+.answer-select:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+  
+.answer-select input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.answer-select.right input ~ .checkmark {
+    background-color: #21f333;
+}
+.answer-select.wrong input ~ .checkmark {
+    background-color: #f32121;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.answer-select input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+.answer-select .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.score {
+    font-size: 22px;
+}
